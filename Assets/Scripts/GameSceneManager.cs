@@ -21,7 +21,7 @@ public class GameSceneManager : MonoBehaviour
     public void PlayButtonClicked()
     {
         
-        SceneManager.LoadSceneAsync(gameScene);
+        SceneManager.LoadSceneAsync("UITesting");
     }
 
     public void MenuButtonClicked()
