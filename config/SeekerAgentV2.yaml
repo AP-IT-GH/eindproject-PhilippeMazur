@@ -1,5 +1,5 @@
 behaviors:
-  SeekerAgentV2:
+  SeekerAgentV2_1:
     trainer_type: ppo
     hyperparameters:
       batch_size: 128
@@ -28,4 +28,4 @@ behaviors:
     keep_checkpoints: 5
     max_steps: 10000000
     time_horizon: 128
-    summary_freq: 30000
+    summary_freq: 5000

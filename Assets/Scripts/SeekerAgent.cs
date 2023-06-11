@@ -4,30 +4,50 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using Random = System.Random;
 
 public class SeekerAgent : Agent // mlagents-learn config/SeekerAgent.yaml --run-id=SeekerAgent
 {
+    private Random rng = new Random();
     private GameObject[] _hiders;
     private DateTime _startTime;
     private int _lastIndex;
     private Rigidbody _rigidbody;
     public float rayLength;
     private bool _hasFoundHider;
-    public override void OnEpisodeBegin() 
+    public override void OnEpisodeBegin()
     {
         _rigidbody ??= GetComponentInChildren<Rigidbody>();
         _rigidbody.velocity = Vector3.zero;
         _hiders ??= GameObject.FindGameObjectsWithTag("Hider").ToArray();
-        transform.localPosition = new Vector3(-40f, 0, 2.4f);
+        int randomPos = rng.Next(1, 5);
+        if (randomPos == 1)
+        {
+            transform.localPosition = new Vector3(-40f, 0, 2.4f);
+        }
+        else if (randomPos == 2)
+        {
+            transform.localPosition = new Vector3(12.5f, 0, 32.7f);
+        }
+        else if (randomPos == 3)
+        {
+            transform.localPosition = new Vector3(46.5f, 0, 56.8f);
+        }
+        else
+        {
+            transform.localPosition = new Vector3(36.9f, 0, -38.2f);
+        }
+
+
         _hiders.ToList().ForEach(h => h.SetActive(false));
         int currentIndex = _lastIndex;
         while (currentIndex == _lastIndex)
         {
-            currentIndex = UnityEngine.Random.Range(0, _hiders.Count()+1);
+            currentIndex = UnityEngine.Random.Range(0, _hiders.Count() + 1);
         }
         Debug.Log(_hiders.Count());
         Debug.Log(currentIndex);
-        _hiders[currentIndex-1].SetActive(true);
+        _hiders[currentIndex - 1].SetActive(true);
 
         _startTime = DateTime.Now;
 
@@ -35,7 +55,7 @@ public class SeekerAgent : Agent // mlagents-learn config/SeekerAgent.yaml --run
     }
     public override void CollectObservations(VectorSensor sensor)
     {
-       // base.CollectObservations(sensor);
+        // base.CollectObservations(sensor);
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
@@ -65,14 +85,14 @@ public class SeekerAgent : Agent // mlagents-learn config/SeekerAgent.yaml --run
 
         //var ray = new Ray(this.transform.position, this.transform.forward);
         //if (Physics.Raycast(ray, out RaycastHit hit,rayLength))
-       // {
-         //   if (hit.transform.gameObject.CompareTag("Hider") && !_hasFoundHider)
-          //  {                
-           //     var duration = DateTime.Now - _startTime;
-            //    Debug.Log($"found object in: {duration.Minutes} minutes and {duration.Seconds} seconds");
-               // AddReward(0.25f);
-             //   _hasFoundHider = true;
-            //}
+        // {
+        //   if (hit.transform.gameObject.CompareTag("Hider") && !_hasFoundHider)
+        //  {                
+        //     var duration = DateTime.Now - _startTime;
+        //    Debug.Log($"found object in: {duration.Minutes} minutes and {duration.Seconds} seconds");
+        // AddReward(0.25f);
+        //   _hasFoundHider = true;
+        //}
         //}
     }
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -118,7 +138,7 @@ public class SeekerAgent : Agent // mlagents-learn config/SeekerAgent.yaml --run
                 break;
         }
         transform.Rotate(rotateDir, Time.deltaTime * 200f);
-        _rigidbody.AddForce(dirToGo, ForceMode.VelocityChange);
+        _rigidbody.AddForce(dirToGo * 2f, ForceMode.VelocityChange);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -126,7 +146,10 @@ public class SeekerAgent : Agent // mlagents-learn config/SeekerAgent.yaml --run
         {
             AddReward(2f);
             EndEpisode();
-        }
+        } //else if (collision.gameObject.CompareTag("Obstacle"))
+        //{
+        //    AddReward(-0.001f);
+        //}
     }
 }
 

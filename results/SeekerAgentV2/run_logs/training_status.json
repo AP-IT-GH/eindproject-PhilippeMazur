@@ -2,15 +2,6 @@
     "SeekerAgentV2": {
         "checkpoints": [
             {
-                "steps": 74900,
-                "file_path": "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-74900.onnx",
-                "reward": 1.8723999336361885,
-                "creation_time": 1686241317.7275324,
-                "auxillary_file_paths": [
-                    "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-74900.pt"
-                ]
-            },
-            {
                 "steps": 88472,
                 "file_path": "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-88472.onnx",
                 "reward": 1.8161000795662403,
@@ -27,15 +18,42 @@
                 "auxillary_file_paths": [
                     "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-96678.pt"
                 ]
+            },
+            {
+                "steps": 343484,
+                "file_path": "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-343484.onnx",
+                "reward": null,
+                "creation_time": 1686330629.2159803,
+                "auxillary_file_paths": [
+                    "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-343484.pt"
+                ]
+            },
+            {
+                "steps": 387157,
+                "file_path": "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-387157.onnx",
+                "reward": null,
+                "creation_time": 1686333543.4881535,
+                "auxillary_file_paths": [
+                    "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-387157.pt"
+                ]
+            },
+            {
+                "steps": 441473,
+                "file_path": "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-441473.onnx",
+                "reward": null,
+                "creation_time": 1686334416.8653848,
+                "auxillary_file_paths": [
+                    "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-441473.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 96678,
+            "steps": 441473,
             "file_path": "results\\SeekerAgentV2\\SeekerAgentV2.onnx",
             "reward": null,
-            "creation_time": 1686246520.372942,
+            "creation_time": 1686334416.8653848,
             "auxillary_file_paths": [
-                "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-96678.pt"
+                "results\\SeekerAgentV2\\SeekerAgentV2\\SeekerAgentV2-441473.pt"
             ]
         }
     },
