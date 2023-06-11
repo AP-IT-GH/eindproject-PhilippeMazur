@@ -1603,9 +1603,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: e961aa9d794261a498d6f83aff8aece5, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 2
   m_BehaviorName: SeekerAgentV2_1
   TeamId: 0
   m_UseChildSensors: 1
@@ -5762,7 +5762,7 @@ PrefabInstance:
     - target: {fileID: 991671192324017855, guid: 19dd87bfb31d8814793b9aa2ff705b82,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.8
+      value: 36.9
       objectReference: {fileID: 0}
     - target: {fileID: 991671192324017855, guid: 19dd87bfb31d8814793b9aa2ff705b82,
         type: 3}
@@ -5772,7 +5772,7 @@ PrefabInstance:
     - target: {fileID: 991671192324017855, guid: 19dd87bfb31d8814793b9aa2ff705b82,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3
+      value: -38.2
       objectReference: {fileID: 0}
     - target: {fileID: 991671192324017855, guid: 19dd87bfb31d8814793b9aa2ff705b82,
         type: 3}
