@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager : MonoBehaviour
 {
     public string menuScene = "MenuScene";
-    public string gameScene = "UITestingScene";
+    public string gameScene = "SampleScene";
     public string settingsScene = "SettingsScene";
     private AudioClip backgroundMusic;
 
@@ -21,7 +21,7 @@ public class GameSceneManager : MonoBehaviour
     public void PlayButtonClicked()
     {
         
-        SceneManager.LoadSceneAsync("UITesting");
+        SceneManager.LoadSceneAsync("SampleScene");
     }
 
     public void MenuButtonClicked()
