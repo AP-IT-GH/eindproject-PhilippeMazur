@@ -120,6 +120,14 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.pico.livepreview": {
+      "version": "file:C:/Users/NicoV/Downloads/PICO Unity Live Preview Plugin (Experiment)",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.xr.management": "4.0.0"
+      }
+    },
     "com.unity.render-pipelines.core": {
       "version": "12.1.7",
       "depth": 1,
@@ -293,7 +301,7 @@
     },
     "com.unity.xr.openxr": {
       "version": "1.4.2",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.xr.management": "4.0.1",
