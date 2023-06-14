@@ -230,6 +230,10 @@ QualitySettings:
     PS4: 5
     PS5: 5
     PSP2: 2
+<<<<<<< HEAD
+=======
+    Server: 0
+>>>>>>> origin/UI_Backup
     Stadia: 5
     Standalone: 5
     WebGL: 3
