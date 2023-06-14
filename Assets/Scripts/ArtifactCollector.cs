@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ArtifactCollector : MonoBehaviour
@@ -40,7 +41,9 @@ public class ArtifactCollector : MonoBehaviour
             {
                 uiText.text = $"{artifactsBroughtToAltar} / 5";
             }
+        } else {
+            SceneManager.LoadSceneAsync("MenuScene");
         }
-        
+
     }
 }
