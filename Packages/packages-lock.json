@@ -120,14 +120,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.pico.livepreview": {
-      "version": "file:D:/Users/Nicolas/Downloads/PICO Unity Live Preview Plugin (Experiment)",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.xr.management": "4.0.0"
-      }
-    },
     "com.unity.render-pipelines.core": {
       "version": "12.1.7",
       "depth": 1,
@@ -309,16 +301,6 @@
         "com.unity.inputsystem": "1.3.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.valvesoftware.unity.openvr": {
-      "version": "file:../Assets/SteamVR/OpenVRUnityXRPackage/Editor/com.valvesoftware.unity.openvr-1.1.4.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.unity.xr.management": "3.2.13",
-        "com.unity.ugui": "1.0.0",
-        "com.unity.xr.legacyinputhelpers": "2.1.4"
-      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
