@@ -4,17 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - projectile
+  - FxTemporaire
   - Hider
   - Obstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ceiling
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Vase
   - 
   - 
   - 

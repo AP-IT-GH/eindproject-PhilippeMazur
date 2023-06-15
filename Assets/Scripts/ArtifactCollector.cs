@@ -19,17 +19,7 @@ public class ArtifactCollector : MonoBehaviour
     private float interval = 1f;
     void Update()
     {
-        //Verwijder alle code als we onze level hebben. Dit is placeholder code om de werking te tonen
-        timer += Time.deltaTime;
 
-        if (timer >= interval)
-        {
-            // Call your method here
-            CollectArtifact();
-
-            // Reset the timer
-            timer = 0f;
-        }
     }
 
     public void CollectArtifact()
@@ -41,8 +31,6 @@ public class ArtifactCollector : MonoBehaviour
             {
                 uiText.text = $"{artifactsBroughtToAltar} / 5";
             }
-        } else {
-            SceneManager.LoadSceneAsync("MenuScene");
         }
 
     }
