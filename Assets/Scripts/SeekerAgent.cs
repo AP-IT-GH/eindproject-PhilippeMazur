@@ -20,23 +20,7 @@ public class SeekerAgent : Agent // mlagents-learn config/SeekerAgent.yaml --run
         _rigidbody ??= GetComponentInChildren<Rigidbody>();
         _rigidbody.velocity = Vector3.zero;
         _hiders ??= GameObject.FindGameObjectsWithTag("Hider").ToArray();
-        int randomPos = rng.Next(1, 5);
-        if (randomPos == 1)
-        {
-            transform.localPosition = new Vector3(-40f, 0, 2.4f);
-        }
-        else if (randomPos == 2)
-        {
-            transform.localPosition = new Vector3(12.5f, 0, 32.7f);
-        }
-        else if (randomPos == 3)
-        {
-            transform.localPosition = new Vector3(46.5f, 0, 56.8f);
-        }
-        else
-        {
-            transform.localPosition = new Vector3(36.9f, 0, -38.2f);
-        }
+        transform.position = new Vector3(268.5f, 1, 33.60131f);
 
 
         _hiders.ToList().ForEach(h => h.SetActive(false));
