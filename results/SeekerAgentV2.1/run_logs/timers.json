@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1686335650",
+        "python_version": "3.9.13 (main, Aug 25 2022, 23:51:50) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Ignou\\anaconda3\\Scripts\\mlagents-learn config/SeekerAgentV2.yaml --run-id=SeekerAgentV2.1 --force",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1686335658"
+    },
+    "total": 7.981475999999999,
+    "count": 1,
+    "self": 0.012482399999999672,
+    "children": {
+        "run_training.setup": {
+            "total": 0.2758132999999998,
+            "count": 1,
+            "self": 0.2758132999999998
+        },
+        "TrainerController.start_learning": {
+            "total": 7.6931803,
+            "count": 1,
+            "self": 0.00014089999999988834,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 7.693007,
+                    "count": 1,
+                    "self": 7.693007
+                },
+                "TrainerController._save_models": {
+                    "total": 3.240000000026555e-05,
+                    "count": 1,
+                    "self": 3.240000000026555e-05
+                }
+            }
+        }
+    }
+}
