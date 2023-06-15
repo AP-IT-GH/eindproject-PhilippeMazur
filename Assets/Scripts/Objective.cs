@@ -31,6 +31,7 @@ public class Objective : MonoBehaviour
     public void IncrementArtifactsCollected()
     {
         artifactsCollected++;
+        Debug.Log(artifactsCollected);
     }
 
     public void PlayerGotTouched()

@@ -26,34 +26,19 @@ public class Healtbar : MonoBehaviour
 
     void Update()
     {
-        //Verwijder alle code als we onze level hebben. Dit is placeholder code om de werking te tonen
-        timer += Time.deltaTime;
 
-        if (timer >= interval)
-        {
-            // Call your method here
-            DecreaseHealth();
-
-            // Reset the timer
-            timer = 0f;
-        }
     }
 
-    private void DecreaseHealth()
+    public void DecreaseHealth()
     {
         
         if(rt.sizeDelta.x > 0)
         {
-            currentPosition -= new Vector3(40, 0, 0);
-            currentWidth -= new Vector2(80, 0);
+            currentPosition -= new Vector3(80, 0, 0);
+            currentWidth -= new Vector2(160, 0);
 
             greenBar.transform.localPosition = currentPosition;
             rt.sizeDelta = currentWidth;
-        } else
-        {
-            //Dit betekent dat seeker dood is, schrijf nodige code hierbij
-            SceneManager.LoadSceneAsync("WinnerScene");
-
         }
 
     }
